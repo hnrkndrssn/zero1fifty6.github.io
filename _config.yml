@@ -1,0 +1,35 @@
+#
+# Blog Settings
+#
+blog_author: Henrik Andersson
+blog_url: http://zero1fifty6.com
+gravatar_url: https://s.gravatar.com/avatar/de0ee1937ada29a8c7be1db1505c690b
+subscribe_rss: http://feeds.zero1fifty6.com/zero1fifty6
+
+# Github repositories
+github_user: zero1fifty6
+github_repo_url: https://github.com/zero1fifty6/zero1fifty6.github.io/
+
+# Twitter
+twitter_user: zero1fifty6
+twitter_tweet_button: true
+
+# Disqus Comments
+disqus_short_name: zero1fifty6
+disqus_show_comment_count: true
+
+# Google Analytics
+google_analytics_tracking_id: ''
+
+#
+# Jekyll Settings
+#
+markdown: rdiscount
+pygments: true
+permalink: /archive/:year/:month/:day/:title/
+rdiscount:
+  extensions: [smart]
+paginate: 5
+paginate_path: "page/:num"
+category_dir: categories
+excerpt_separator: "<!--break-->"
