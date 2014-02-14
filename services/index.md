@@ -22,5 +22,3 @@ Duis id ipsum sit amet nunc laoreet aliquam. Nulla facilisi. Sed ut tincidunt li
 
 ### Desktop Application Development
 Proin vitae ligula accumsan, accumsan purus vel, volutpat ligula. Etiam tempus dolor et neque ultricies fringilla. Nulla scelerisque mauris vel nunc dictum, sit amet placerat erat commodo. Nam venenatis mi at diam vestibulum, eu euismod magna rhoncus. Etiam condimentum consectetur lorem eu commodo. Etiam vestibulum elementum nulla ut rutrum. Aliquam bibendum vel mauris id euismod. Praesent at mi faucibus, dictum velit vel, molestie lorem. Praesent tristique ipsum in tellus interdum fringilla. Aliquam orci lacus, vestibulum nec erat at, imperdiet venenatis lectus. Nulla at sem adipiscing, commodo ligula non, posuere ante. Sed eu nisi imperdiet, malesuada nisi non, ultricies felis. Fusce ornare mollis condimentum.
-
----

@@ -535,13 +535,13 @@ body {
   color: #f0e7d5;
   font-weight: normal;
   background: #252525;
-  background-attachment: fixed !important;
+  /*background-attachment: fixed !important;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2a2a29), color-stop(100%, #1c1c1c));
   background: -webkit-linear-gradient(#2a2a29, #1c1c1c);
   background: -moz-linear-gradient(#2a2a29, #1c1c1c);
   background: -o-linear-gradient(#2a2a29, #1c1c1c);
   background: -ms-linear-gradient(#2a2a29, #1c1c1c);
-  background: linear-gradient(#2a2a29, #1c1c1c);
+  background: linear-gradient(#2a2a29, #1c1c1c);*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -557,6 +557,7 @@ p, ul, ol, table, pre, dl {
 
 h1, h2, h3 {
   line-height: 1.1;
+  color: #bb0000;
 }
 
 h1 {
@@ -568,7 +569,7 @@ h2 {
 }
 
 h4, h5, h6 {
-  color: #e8e8e8;
+  color: #b6b6b6;
 }
 
 h3 {
@@ -576,16 +577,17 @@ h3 {
   line-height: 24px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: normal;
-  color: #b6b6b6;
+  color: #bb0000;
 }
 
 a {
-  color: #ffcc00;
+  color: #aa0000;
   font-weight: 400;
   text-decoration: none;
+  transition: color 0.5s;
 }
 a:hover {
-  color: #ffeb9b;
+  color: #cc0000;
 }
 
 a small {
@@ -654,7 +656,7 @@ pre {
   overflow-y: hidden;
 }
 pre code {
-  color: #efefef;
+  color: #bb0000;
   text-shadow: 0px 1px 0px #000;
   margin: 0;
   padding: 0;
@@ -681,11 +683,26 @@ td {
 }
 
 hr {
-  border: 0;
-  outline: none;
-  height: 3px;
-  background: transparent url("../images/hr.gif") center center repeat-x;
-  margin: 0 0 20px;
+  width: 100%; 
+  height: 0px;
+  margin: 0 0 1.4em;
+  border: none; 
+  background: #222;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+hr:after {
+  content: '\00A7';
+  display: inline-block;
+  position: relative;
+  top: -0.85em;
+  font-size: 1.25em;
+  padding: 0 0.25em;
+  background: #252525;
+  color: #111;
+  text-shadow: 0px 1px 0px #333;
 }
 
 dt {
@@ -701,19 +718,31 @@ dt {
   height: 60px;
   width: 100%;
   position: fixed;
-  background: url(../images/nav-bg.gif) #353535;
-  border-bottom: 4px solid #434343;
-  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  background: rgba(37, 37, 37, 0.85);
+  box-shadow: 0px 0px 1px #444;
+  border-bottom: 1px solid #222;
+  line-height: 40px;
+}
+#header #title {
+  float: left;
+  border: 0;
+  outline: none;
+  margin: 0 0 0 15px;
+  padding: 0 0 5px 0;
+}
+#header #title h1 {
+  font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 2.75em;
+  line-height: 1.5em;
 }
 #header nav {
-  max-width: 650px;
-  margin: 0 auto;
+  float: right;
   padding: 0 10px;
-  background: blue;
-  margin: 6px auto;
+}
+#header nav ul {
+  height: 60px;
+  line-height: 60px;
 }
 #header nav li {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -721,7 +750,6 @@ dt {
   list-style: none;
   display: inline;
   color: white;
-  line-height: 50px;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
   font-size: 14px;
 }
@@ -766,14 +794,6 @@ dt {
   -o-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
 }
-#header nav li.fork {
-  float: left;
-  margin-left: 0px;
-}
-#header nav li.downloads {
-  float: right;
-  margin-left: 6px;
-}
 #header nav li.title {
   float: right;
   margin-right: 10px;
@@ -786,55 +806,8 @@ section {
   margin: 20px 0;
   margin-top: 70px;
 }
-section #title {
-  border: 0;
-  outline: none;
-  margin: 0 0 50px 0;
-  padding: 0 0 5px 0;
-}
-section #title h1 {
-  font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 40px;
-  text-align: center;
-  line-height: 36px;
-}
-section #title p {
-  color: #d7cfbe;
-  font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  text-align: center;
-}
-section #title .credits {
-  font-size: 11px;
-  font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #696969;
-  margin-top: -10px;
-}
-section #title .credits.left {
-  float: left;
-}
-section #title .credits.right {
-  float: right;
-}
 
 @media print, screen and (max-width: 720px) {
-  #title .credits {
-    display: block;
-    width: 100%;
-    line-height: 30px;
-    text-align: center;
-  }
-  #title .credits .left {
-    float: none;
-    display: block;
-  }
-  #title .credits .right {
-    float: none;
-    display: block;
-  }
 }
 @media print, screen and (max-width: 480px) {
   #header {
