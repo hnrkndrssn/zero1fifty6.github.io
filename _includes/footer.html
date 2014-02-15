@@ -1,3 +1,10 @@
+<hr/>
 <footer>
-	&copy; 2014 <a href="/">zero1fifty6</a>
-</footer>
+	<div>
+  		copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }} 
+	</div>
+	<a href="/" class="logo"><img src="/images/zero1fifty6_red.png" alt="zero1fity6 logo"/></a>
+</footer> 
+
+{% include disqus.html %}
+{% include twitter_sharing.html %}

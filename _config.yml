@@ -1,7 +1,11 @@
 #
 # Site Settings
 #
-site_title: zero1fifty6
+author: zero1fifty6
+description: 
+url: http://zero1fifty6.com
+title: zero1fifty6
+subtitle: 
 
 #
 # Blog Settings
@@ -31,10 +35,10 @@ google_analytics_tracking_id: ''
 #
 markdown: rdiscount
 pygments: true
-permalink: /archive/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 rdiscount:
   extensions: [smart]
 paginate: 5
-paginate_path: "page/:num"
+paginate_path: "blog/page/:num"
 category_dir: categories
 excerpt_separator: "<!--break-->"
