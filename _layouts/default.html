@@ -1,28 +1,22 @@
 {% include head.html %}
 
   <body>
-      <div id="header">
-        <div id="title">
-        <h1><a href="/"><img src="/images/zero1fifty6_red.png" alt="zero1fity6 logo" /> <span>zero1fifty6</span></a></h1>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="/about">about</a></li>
-            <li><a href="/projects">projects</a></li>
-            <li><a href="/services">services</a></li>
-            <li><a href="/pricing">pricing</a></li>
-            <li><a href="/blog">blog</a></li>
-            <li><a href="/contact">contact</a></li>
-            <li><a href="/get-started">get started</a></li>
-        </nav>
-      </div>
-
-    <div class="wrapper">
-      <section>
-        {{ content }}
-      </section>
+    {% include header.html %}
+    <div class="body">
+      {{ content }}
     </div>
+    {% include footer.html %}
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    {% include footer.html %}    
+    <script type="text/javascript">
+    var str=location.href.toLowerCase();
+    $("header nav li a").each(function() {
+      $(this).click(function () {
+        $('a.current').removeClass('current');
+      });
+      if (str.indexOf(this.href.toLowerCase()) > -1) {
+        $(this).addClass("current");
+      }
+    });
+  </script>  
   </body>
 </html>

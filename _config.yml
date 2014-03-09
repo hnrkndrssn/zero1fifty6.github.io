@@ -28,7 +28,7 @@ disqus_short_name: zero1fifty6
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id: ''
+google_analytics_tracking_id: 'UA-37423173-2'
 
 #
 # Jekyll Settings
