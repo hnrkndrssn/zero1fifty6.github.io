@@ -218,3 +218,8 @@ pip-log.txt
 ## Jekyll Output Folder
 #############
 _site/
+
+#############
+## Paint.NET Image
+#############
+*.pdn
